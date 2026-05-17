@@ -2,11 +2,11 @@
 
 ## Anggota Kelompok
 
-| Nama | NRP | Program Studi | Semester |
-| --- | --- | --- | :---: |
-| Abdullah Sultan Barizy | 5025241092 | S1 Teknik Informatika | 4 |
-| Farikh Muhammad Fauzan | 5025241135 | S1 Teknik Informatika | 4 |
-| Willy Dava Nugraha | 5025241090 | S1 Teknik Informatika | 4 |
+| Nama | NRP |
+| --- | --- | 
+| Abdullah Sultan Barizy | 5025241092 | 
+| Farikh Muhammad Fauzan | 5025241135 |
+| Willy Dava Nugraha | 5025241090 |
 
 ## Dataset 
 - Dataset diambil dari `https://dataonline.bmkg.go.id/` dengan rentang data 12 bulan (Mei 2025 - April 2026) dari tiga stasiun cuaca dari dua kota, yaitu dari Kota Surabaya (Stasiun Meteorologi Perak I dan Stasiun Meteorologi Maritim Tanjung Perak) dan Kabupaten Sidoarjo (Stasiun Meteorologi Juanda).
@@ -19,9 +19,18 @@
 <img width="441" height="318" alt="image" src="https://github.com/user-attachments/assets/cf32fd12-da5b-4ab7-aa6a-9bfeeda1098b" />
 
 ## Performance Training
-- Evaluasi dengan MAE dan MAPE
+- Evaluasi dengan MSE dan MAPE
 <img width="342" height="194" alt="image" src="https://github.com/user-attachments/assets/5fa472f8-7084-4bb1-b5e9-f978f3bd2f24" />
-
+  
 - Evaluasi dengan $$R^2$$
 <img width="606" height="336" alt="image" src="https://github.com/user-attachments/assets/6cc33443-f5a7-4924-be0a-c94781bdc378" />
+
+## Performance Testing
+- Evaluasi dengan MSE dan MAPE
+<img width="346" height="388" alt="image" src="https://github.com/user-attachments/assets/34722a71-943d-491c-89f4-fb4492bfde3a" />
+
+- Evaluasi dengan $$R^2$$
+<img width="477" height="259" alt="image" src="https://github.com/user-attachments/assets/f0bbfe34-1e91-4053-a3cf-ea68d6e7f9fa" />
+
+
 
