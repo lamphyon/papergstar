@@ -9,6 +9,8 @@
 | Willy Dava Nugraha | 5025241090 | S1 Teknik Informatika | 4 |
 
 ## Dataset 
-- Dataset diambil dari `https://dataonline.bmkg.go.id/` dengan rentang data 12 bulan (Mei 2025 - April 2026) dari tiga stasiun cuaca dari dua kota, yaitu dari Kota Surabaya (Stasiun Meteorologi Perak I dan Stasiun Meteorologi Maritim Tanjung Perak) dan Kabupaten Sidoarjo (Stasiun Meteorologi Juanda)
-- Plot dataset ditampilkan pada grafik berikut:
+- Dataset diambil dari `https://dataonline.bmkg.go.id/` dengan rentang data 12 bulan (Mei 2025 - April 2026) dari tiga stasiun cuaca dari dua kota, yaitu dari Kota Surabaya (Stasiun Meteorologi Perak I dan Stasiun Meteorologi Maritim Tanjung Perak) dan Kabupaten Sidoarjo (Stasiun Meteorologi Juanda).
+- Dataset mentah dapat dilihat pada folder `data/raw`. Setiap file data mentah memiliki keterbatasan pengambilan hanya berisi rentang maksimal 30 hari dari satu stasiun cuaca.
+- Dataset yang telah diproses pada rentang 12 bulan ((Mei 2025 - April 2026) dan 2 bulan (Maret 2026 - April 2026) dapat dilihat pada folder `data/processed`.
+- Plot dataset yang sudah diproses selama 12 bulan ditampilkan pada grafik berikut:
   <img width="1320" height="585" alt="image" src="https://github.com/user-attachments/assets/8edcf85f-8430-4c23-8cc2-be6276e90b7c" />
