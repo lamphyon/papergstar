@@ -32,5 +32,9 @@
 - Evaluasi dengan $$R^2$$
 <img width="477" height="259" alt="image" src="https://github.com/user-attachments/assets/f0bbfe34-1e91-4053-a3cf-ea68d6e7f9fa" />
 
+## Plot Model
+<img width="1331" height="545" alt="image" src="https://github.com/user-attachments/assets/c149f791-ca16-4b20-bf6d-898156b32b36" />
+
+
 
 
