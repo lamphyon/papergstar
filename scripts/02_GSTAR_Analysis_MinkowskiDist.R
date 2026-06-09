@@ -1,6 +1,6 @@
 # =====================================================================
 # Project: GSTAR Modeling for Temperature in Surabaya & Sidoarjo
-# Script 02: GSTAR Modeling, Performance, and Forecasting
+# Script 03: GSTAR Modeling, Performance, and Forecasting with Minkowski Distance
 # Authors: Willy Dava Nugraha, Farikh Muhammad Fauzan, Abdullah Sultan Barizy
 # =====================================================================
 
