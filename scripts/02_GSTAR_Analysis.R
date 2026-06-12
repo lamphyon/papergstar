@@ -13,7 +13,8 @@ library(xts)
 
 # --- 2. Data Preparation ---
 # setwd("path/to/your/project") # Adjust this to your local directory
-df <- read.csv("data/processed/data_bmkg_combined_clean_v2.csv", check.names = FALSE) 
+# df <- read.csv("data/processed/data_bmkg_combined_clean_v2.csv", check.names = FALSE) 
+df <- read.csv(file.choose(), check.names = FALSE)
 
 # Reorder columns to match spatial coordinates
 df_suhu <- df[, c("Stasiun Meteorologi Maritim Tanjung Perak", 
