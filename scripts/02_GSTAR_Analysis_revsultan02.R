@@ -16,6 +16,10 @@ library(geosphere)
 # --- 2. Data Preparation ---
 # (Pastikan objek 'x' yang berisi xts raw data suhu sudah berjalan normal sebelum ini)
 df <- read.csv(file.choose(), check.names = FALSE) 
+# Reorder columns to match spatial coordinates
+df_suhu <- df[, c("Stasiun Meteorologi Maritim Tanjung Perak", 
+                  "Stasiun Meteorologi Perak I", 
+                  "Stasiun Meteorologi Juanda")]
 x <- xts(df_suhu, order.by = as.Date(df$TANGGAL, format="%d-%m-%Y"))
 colnames(x) <- c("TanjungPerak", "PerakI", "Juanda")
 
