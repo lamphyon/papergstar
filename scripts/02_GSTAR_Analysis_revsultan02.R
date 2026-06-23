@@ -15,9 +15,9 @@ library(geosphere)
 
 # --- 2. Data Preparation ---
 # (Pastikan objek 'x' yang berisi xts raw data suhu sudah berjalan normal sebelum ini)
-# df <- read.csv(file.choose(), check.names = FALSE) 
-# x <- xts(df_suhu, order.by = as.Date(df$TANGGAL, format="%d-%m-%Y"))
-# colnames(x) <- c("TanjungPerak", "PerakI", "Juanda")
+df <- read.csv(file.choose(), check.names = FALSE) 
+x <- xts(df_suhu, order.by = as.Date(df$TANGGAL, format="%d-%m-%Y"))
+colnames(x) <- c("TanjungPerak", "PerakI", "Juanda")
 
 # Simpan data asli (suhu aktual) sebagai referensi inverse-differencing
 x_asli <- x
