@@ -1,7 +1,3 @@
-# =====================================================================
-# Project: Manual GSTAR(1;1) Modeling (From Scratch)
-# =====================================================================
-
 # --- 1. Load Libraries ---
 if (!require("xts")) install.packages("xts")
 if (!require("geosphere")) install.packages("geosphere") 
