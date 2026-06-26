@@ -44,6 +44,28 @@ weight <- w_ccf / rowSums(w_ccf)
 cat("\n--- Matriks Bobot Cross-Correlation ---\n")
 print(round(weight, 4))
 
+# 3.5 MACF DAN MPACF
+cat("   IDENTIFIKASI ORDE (MACF & MPACF)         \n")
+
+# Ekstrak coredata dari data train yang sudah di-centered
+Z_train <- coredata(x_train_centered)
+
+# Menggunakan fungsi bawaan acf() dan pacf() pada data multivariat
+# Ini akan menghasilkan plot matriks autokorelasi dan korelasi silang antar stasiun
+
+# 1. Plot MACF (Cek cut-off untuk orde MA)
+par(mar=c(2, 2, 2, 2)) # Menyesuaikan margin agar plot matriks terlihat rapi
+acf_model <- acf(Z_train, lag.max = 10, main = "Plot MACF (Matrix Autocorrelation Function)")
+
+# 2. Plot MPACF (Cek cut-off untuk orde AR)
+pacf_model <- pacf(Z_train, lag.max = 10, main = "Plot MPACF (Matrix Partial Autocorrelation Function)")
+
+# Menampilkan nilai matriks MACF untuk lag 1 sampai 3 di console
+cat("\n--- Nilai Matriks Autokorelasi Silang (Lag 1 hingga 3) ---\n")
+for (lag_i in 1:3) {
+  cat(sprintf("\nLag %d:\n", lag_i))
+  print(round(acf_model$acf[lag_i + 1, , ], 4)) # lag_i + 1 karena index 1 adalah lag 0
+}
 
 # =====================================================================
 # --- 4. MANUAL GSTAR MODEL FITTING ---
