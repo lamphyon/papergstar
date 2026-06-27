@@ -268,3 +268,39 @@ colnames(forecast_xts) <- colnames(x)
 
 print(forecast_xts)
 plot(forecast_xts, main = "Forecast Suhu 7 Hari ke Depan", legend.loc = "topright")
+
+# =====================================================================
+# --- 6.5. UJI ASUMSI RESIDUAL ---
+# =====================================================================
+# Install package lmtest jika belum ada (untuk Breusch-Pagan test)
+if (!require("lmtest")) install.packages("lmtest")
+library(lmtest)
+
+# Looping untuk menguji residual di setiap stasiun
+for (i in 1:N) {
+  stasiun <- colnames(x)[i]
+  fit <- gstar_models[[i]]
+  res <- residuals(fit)
+  
+  cat(sprintf("\n--- Stasiun: %s ---\n", stasiun))
+  
+  # 1. Uji Normalitas (Kolmogorov-Smirnov)
+  ks_res <- ks.test(res, "pnorm", mean = mean(res), sd = sd(res))
+  cat("1. Uji Normalitas (Kolmogorov-Smirnov):\n")
+  cat(sprintf("   p-value = %.4f", ks_res$p.value))
+  if(ks_res$p.value > 0.05) {
+    cat(" (Residual Berdistribusi Normal)\n")
+  } else {
+    cat(" (Residual TIDAK Berdistribusi Normal)\n")
+  }
+  
+  # 2. Uji Autokorelasi (Ljung-Box)
+  lb_res <- Box.test(res, lag = 12, type = "Ljung-Box")
+  cat("2. Uji Autokorelasi (Ljung-Box):\n")
+  cat(sprintf("   p-value = %.4f", lb_res$p.value))
+  if(lb_res$p.value > 0.05) {
+    cat(" (Tidak Ada Autokorelasi)\n")
+  } else {
+    cat(" (Terdapat Autokorelasi pada Residual)\n")
+  }
+}
